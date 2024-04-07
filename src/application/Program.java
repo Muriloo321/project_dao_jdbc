@@ -31,6 +31,12 @@ public class Program {
 		selDao.insert(newSeller);
 		System.out.println("Inserted! New ID = "+ newSeller.getId());
 		
+		System.out.println("\n<---TEST 4: SellerUpdate--->");
+		seller = selDao.findById(1);
+		seller.setName("Jennifer");
+		selDao.update(seller);
+		System.out.println("Update Completed!");
+		
 	}
 
 }
